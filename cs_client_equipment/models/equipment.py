@@ -43,6 +43,13 @@ class EquipmentDetails(models.Model):
     longitude = fields.Float('Longitude', digits=(10, 7))
     file_ids = fields.Many2many('ir.attachment', string="Documents", copy=False)
     jobs = fields.One2many('equipment.jobs', 'equipment', string='Jobs')
+    # New field for product linkage
+    product_id = fields.Many2one(
+        'product.product',
+        string='Product',
+        tracking=True,
+        help="The product that this equipment represents"
+    )
 
     @api.onchange('client')
     def onchange_client(self):
@@ -50,6 +57,27 @@ class EquipmentDetails(models.Model):
             if rec.client:
                 rec.site_contact = rec.client.site_contact
                 rec.site_phone = rec.client.site_phone
+
+    @api.onchange('product_id')
+    def onchange_product_id(self):
+        """Update equipment details based on selected product"""
+        for record in self:
+            if record.product_id:
+                # Set manufacturer if available on product
+                if hasattr(record.product_id, 'manufacturer_id') and record.product_id.manufacturer_id:
+                    record.manufacturer_id = record.product_id.manufacturer_id
+                
+                # Set model to product name if empty
+                if not record.model:
+                    record.model = record.product_id.name
+                
+                # Set reference to product code if empty
+                if not record.ref and record.product_id.default_code:
+                    record.ref = record.product_id.default_code
+                
+                # Set category if available and empty
+                if hasattr(record.product_id, 'equipment_category_id') and record.product_id.equipment_category_id:
+                    record.category_id = record.product_id.equipment_category_id
 
     @api.model_create_multi
     def create(self, vals_list):

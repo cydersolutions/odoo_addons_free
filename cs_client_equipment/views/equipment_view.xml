@@ -10,6 +10,7 @@
                 <field name="category_id" optional="hide"/>
                 <field name="client" optional="show"/>
                 <field name="manufacturer_id" optional="show"/>
+                <field name="product_id" optional="show"/>
                 <field name="ref" optional="show"/>
                 <field name="model" optional="show"/>
                 <field name="asset_tag" optional="show"/>
@@ -35,6 +36,7 @@
                         <group>
                             <field name="category_id"/>
                             <field name="client" string="Owner"/>
+                            <field name="product_id"/>
                             <label for="street" string="Equipment Address"/>
                             <div class="o_address_format">
                                 <field name="street" placeholder="Street..." class="o_address_street"/>
@@ -134,8 +136,10 @@
                 <field name="client"/>
                 <field name="serial_no"/>
                 <field name="location"/>
+                <field name="product_id"/>
                 <filter name="group_by_client" context="{'group_by': 'client'}"/>
                 <filter name="group_by_manufacturer" context="{'group_by': 'manufacturer_id'}"/>
+                <filter name="group_by_product" context="{'group_by': 'product_id'}"/>
             </search>
         </field>
     </record>
