@@ -4,7 +4,7 @@
             id="menu_client_equipment"
             name="Client Equipment"
             web_icon="cs_client_equipment,static/description/icon.png"
-            sequence="12"/>
+            sequence="10"/>
 
   <menuitem
             id="menu_configuration"
