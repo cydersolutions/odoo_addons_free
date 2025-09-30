@@ -88,7 +88,7 @@ class EquipmentDetails(models.Model):
                 vals['site_phone'] = partner.site_phone
         return super().create(vals_list)
 
-    @api.returns('self', lambda value: value.id)
+    # @api.returns('self', lambda value: value.id)
     def copy(self, default=None):
         if default is None:
             default = {}

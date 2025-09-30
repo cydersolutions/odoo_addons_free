@@ -12,7 +12,7 @@
 
 {
     'name': 'Client Equipment',
-    'version': '18.0.1.1.0',
+    'version': '19.0.0.0.0',
     'category': 'Productivity',
     'author': 'Cyder Solutions',
     'website': 'https://www.cyder.com.au',
