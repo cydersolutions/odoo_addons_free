@@ -23,7 +23,6 @@
     'data': [
         'security/client_equipment_security_groups.xml',
         'security/ir.model.access.csv',
-        'data/questions_data.xml',
         'views/menu.xml',
         'views/equipment_view.xml',
         'views/equipment_job_view.xml',
