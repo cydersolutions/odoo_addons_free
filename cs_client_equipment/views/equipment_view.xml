@@ -34,9 +34,7 @@
                     </div>
                     <group>
                         <group>
-                            <field name="category_id"/>
                             <field name="client" string="Owner"/>
-                            <field name="product_id"/>
                             <label for="street" string="Equipment Address"/>
                             <div class="o_address_format">
                                 <field name="street" placeholder="Street..." class="o_address_street"/>
@@ -54,8 +52,6 @@
                             <field name="model"/>
                             <field name="asset_tag"/>
                             <field name="serial_no"/>
-                            <field name="latitude" widget="maps"/>
-                            <field name="longitude" widget="maps"/>
                             <field name="site_contact"/>
                             <field name="site_phone"/>
                         </group>
@@ -68,8 +64,24 @@
                             <field name="file_ids" widget="many2many_binary"/>
                         </page>
                         <page string="Service History" name="history">
+                           <div invisible="jobs">
+                               No jobs found.<br/>
+                               This area stores historic servicing data if the <strong>Client Equipment Field Repairs</strong> module has been installed and jobs have been created.
+                           </div>
                             <group>
-                                <field name="jobs" readonly="1" string=" "/>
+                                <field name="jobs" readonly="1" nolabel="1" invisible="not jobs"/>
+                            </group>
+                        </page>
+                        <page string="Other Info">
+                            <group>
+                                <group>
+                                    <field name="category_id" help="Group of like equipment. If the calibration inspections module is installed, this category is where to set up the calibration points"/>
+                                    <field name="product_id"/>
+                                </group>
+                                <group>
+                                    <field name="latitude" widget="maps"/>
+                                    <field name="longitude" widget="maps"/>
+                                </group>
                             </group>
                         </page>
                     </notebook>
