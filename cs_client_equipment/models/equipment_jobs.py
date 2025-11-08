@@ -19,7 +19,7 @@ class EquipmentJobs(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Equipment Job"
 
-    name = fields.Char('Reference Number', default='New')
+    name = fields.Char('Job Number', default='New')
     assignee = fields.Many2one('hr.employee', string='Assignee', tracking=True)
     equipment = fields.Many2one('equipment.details', string='Equipment', tracking=True)
     location = fields.Char('Equipment Location')

@@ -66,7 +66,7 @@
                         <page string="Service History" name="history">
                            <div invisible="jobs">
                                No jobs found.<br/>
-                               This area stores historic servicing data if the <strong>Client Equipment Field Repairs</strong> module has been installed and jobs have been created.
+                               This area stores historic servicing data if the <strong>Client Equipment Field Repairs</strong> module has been installed <strong>and</strong> jobs have been created.
                            </div>
                             <group>
                                 <field name="jobs" readonly="1" nolabel="1" invisible="not jobs"/>
@@ -75,7 +75,7 @@
                         <page string="Other Info">
                             <group>
                                 <group>
-                                    <field name="category_id" help="Group of like equipment. If the calibration inspections module is installed, this category is where to set up the calibration points"/>
+                                    <field name="category_id" string="Category" help="Group of like equipment. If the calibration inspections module is installed, this category is where to set up the calibration points"/>
                                     <field name="product_id"/>
                                 </group>
                                 <group>

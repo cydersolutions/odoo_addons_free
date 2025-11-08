@@ -25,7 +25,6 @@
         'security/ir.model.access.csv',
         'views/menu.xml',
         'views/equipment_view.xml',
-        'views/equipment_job_view.xml',
         'views/res_partner.xml',
         'report/service_history_report.xml',
     ],
