@@ -96,10 +96,10 @@ class EquipmentDetails(models.Model):
             default['name'] = _("%s (copy)", self.name)
         return super(EquipmentDetails, self).copy(default)
 
-    _sql_constraints = [
-        ('unique_equipment_serial_no', 'unique (serial_no)', 'Serial No must be unique.'),
-        ('unique_equipment_asset_tag', 'unique (asset_tag)', 'Asset Tags must be unique.'),
-    ]
+    #_sql_constraints = [
+    #    ('unique_equipment_serial_no', 'unique (serial_no)', 'Serial No must be unique.'),
+    #    ('unique_equipment_asset_tag', 'unique (asset_tag)', 'Asset Tags must be unique.'),
+    #]
 
 class EquipmentCategory(models.Model):
     _name = "equipment.category"
