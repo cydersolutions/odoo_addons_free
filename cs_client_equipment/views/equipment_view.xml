@@ -74,7 +74,7 @@
                         </page>
                     </notebook>
                 </sheet>
-                <chatter class="oe_chatter">
+                <chatter>
                     <field name="message_follower_ids" groups="base.group_user"/>
                     <field name="activity_ids"/>
                     <field name="message_ids"/>
