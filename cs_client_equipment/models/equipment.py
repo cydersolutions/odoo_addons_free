@@ -1,16 +1,15 @@
 # -*- coding: utf-8 -*-
 
 #################################################################################
-# Author      : Cyder Solutions (<www.cyder.com.au>)
-# Copyright(c): 2021-now
-# All Rights Reserved.
-#
-# This module is copyright property of the author mentioned above.
-# You can't redistribute/reshare/recreate it for any purpose.
+# Author      : Cyder Solutions (<www.cyder.com.au>)                            #
+# Copyright(c): 2018-present                                                    #
+# All Rights Reserved.                                                          #
+#                                                                               #
+# This module is copyright property of the author mentioned above.              #
+# You can't redistribute/reshare/recreate it for any purpose.                   #
 #################################################################################
 
 from odoo import api, fields, models, _
-from . import base_geocoder
 
 class EquipmentDetails(models.Model):
     _name = "equipment.details"
@@ -51,6 +50,18 @@ class EquipmentDetails(models.Model):
         help="The product that this equipment represents"
     )
 
+    # Uniqueness constraints — enforced at the PostgreSQL level.
+    # NULL values are permitted by SQL standards (NULL != NULL), so records
+    # without a serial number or asset tag will not conflict with each other.
+    _unique_equipment_serial_no = models.Constraint(
+        'UNIQUE(serial_no)',
+        'Serial number must be unique. This serial number is already assigned to another equipment record.',
+    )
+    _unique_equipment_asset_tag = models.Constraint(
+        'UNIQUE(asset_tag)',
+        'Asset tag must be unique. This asset tag is already assigned to another equipment record.',
+    )
+
     @api.onchange('client')
     def onchange_client(self):
         for rec in self:
@@ -66,15 +77,15 @@ class EquipmentDetails(models.Model):
                 # Set manufacturer if available on product
                 if hasattr(record.product_id, 'manufacturer_id') and record.product_id.manufacturer_id:
                     record.manufacturer_id = record.product_id.manufacturer_id
-                
+
                 # Set model to product name if empty
                 if not record.model:
                     record.model = record.product_id.name
-                
+
                 # Set reference to product code if empty
                 if not record.ref and record.product_id.default_code:
                     record.ref = record.product_id.default_code
-                
+
                 # Set category if available and empty
                 if hasattr(record.product_id, 'equipment_category_id') and record.product_id.equipment_category_id:
                     record.category_id = record.product_id.equipment_category_id
@@ -88,7 +99,6 @@ class EquipmentDetails(models.Model):
                 vals['site_phone'] = partner.site_phone
         return super().create(vals_list)
 
-    # @api.returns('self', lambda value: value.id)
     def copy(self, default=None):
         if default is None:
             default = {}
@@ -96,10 +106,6 @@ class EquipmentDetails(models.Model):
             default['name'] = _("%s (copy)", self.name)
         return super(EquipmentDetails, self).copy(default)
 
-    #_sql_constraints = [
-    #    ('unique_equipment_serial_no', 'unique (serial_no)', 'Serial No must be unique.'),
-    #    ('unique_equipment_asset_tag', 'unique (asset_tag)', 'Asset Tags must be unique.'),
-    #]
 
 class EquipmentCategory(models.Model):
     _name = "equipment.category"
@@ -107,6 +113,7 @@ class EquipmentCategory(models.Model):
     _description = "equipment.category"
 
     name = fields.Char('Category Name', required=True, translate=True)
+
 
 class EquipmentManufacturer(models.Model):
     _name = "equipment.manufacturer"
