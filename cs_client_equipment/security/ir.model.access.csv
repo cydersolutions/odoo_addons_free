@@ -8,5 +8,4 @@ access.equipment.jobs.user,access_cs_client_equipment.equipment.jobs.user,cs_cli
 access.equipment.details.admin,access_equipment.details.admin,cs_client_equipment.model_equipment_details,cs_client_equipment.group_client_equipment_administrator,1,1,1,1
 access.equipment.category.admin,access_equipment.category.admin,cs_client_equipment.model_equipment_category,cs_client_equipment.group_client_equipment_administrator,1,1,1,1
 access.equipment.manufacturer.admin,access_equipment.manufacturer.admin,cs_client_equipment.model_equipment_manufacturer,cs_client_equipment.group_client_equipment_administrator,1,1,1,1
-access.base.geo_provider.admin,access_base.geo_provider.admin,cs_client_equipment.model_base_geo_provider,cs_client_equipment.group_client_equipment_administrator,1,1,1,1
 access.equipment.jobs.admin,access_cs_client_equipment.equipment.jobs.admin,cs_client_equipment.model_equipment_jobs,cs_client_equipment.group_client_equipment_administrator,1,1,1,1
