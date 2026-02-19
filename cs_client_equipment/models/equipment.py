@@ -11,6 +11,7 @@
 
 from odoo import api, fields, models, _
 
+
 class EquipmentDetails(models.Model):
     _name = "equipment.details"
     _inherit = ['mail.thread', 'mail.activity.mixin']
@@ -42,6 +43,21 @@ class EquipmentDetails(models.Model):
     longitude = fields.Float('Longitude', digits=(10, 7))
     file_ids = fields.Many2many('ir.attachment', string="Documents", copy=False)
     jobs = fields.One2many('equipment.jobs', 'equipment', string='Jobs')
+    system_ids = fields.Many2many(
+        'equipment.systems',
+        'equipment_system_equipment_rel',
+        'equipment_id',
+        'system_id',
+        string="Systems",
+    )
+    system_id = fields.Many2one(
+        'equipment.systems',
+        string='System',
+        compute='_compute_system_id',
+        inverse='_inverse_system_id',
+        store=True,
+        tracking=True,
+    )
     # New field for product linkage
     product_id = fields.Many2one(
         'product.product',
@@ -62,6 +78,15 @@ class EquipmentDetails(models.Model):
         'Asset tag must be unique. This asset tag is already assigned to another equipment record.',
     )
 
+    @api.depends('system_ids')
+    def _compute_system_id(self):
+        for rec in self:
+            rec.system_id = rec.system_ids[:1]
+
+    def _inverse_system_id(self):
+        for rec in self:
+            rec.system_ids = [(6, 0, [rec.system_id.id])] if rec.system_id else [(5,)]
+
     @api.onchange('client')
     def onchange_client(self):
         for rec in self:
@@ -74,19 +99,12 @@ class EquipmentDetails(models.Model):
         """Update equipment details based on selected product"""
         for record in self:
             if record.product_id:
-                # Set manufacturer if available on product
                 if hasattr(record.product_id, 'manufacturer_id') and record.product_id.manufacturer_id:
                     record.manufacturer_id = record.product_id.manufacturer_id
-
-                # Set model to product name if empty
                 if not record.model:
                     record.model = record.product_id.name
-
-                # Set reference to product code if empty
                 if not record.ref and record.product_id.default_code:
                     record.ref = record.product_id.default_code
-
-                # Set category if available and empty
                 if hasattr(record.product_id, 'equipment_category_id') and record.product_id.equipment_category_id:
                     record.category_id = record.product_id.equipment_category_id
 

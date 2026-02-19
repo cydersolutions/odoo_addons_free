@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+#################################################################################
+# Author      : Cyder Solutions (<www.cyder.com.au>)                            #
+# Copyright(c): 2018-present                                                    #
+# All Rights Reserved.                                                          #
+#                                                                               #
+# This module is copyright property of the author mentioned above.              #
+# You can't redistribute/reshare/recreate it for any purpose.                   #
+#################################################################################
+-->
 <odoo>
 
     <record id="view_equipment_details_list" model="ir.ui.view">
@@ -19,6 +29,7 @@
             </list>
         </field>
     </record>
+
     <record id="view_equipment_details_form" model="ir.ui.view">
         <field name="name">equipment.details.form</field>
         <field name="model">equipment.details</field>
@@ -44,7 +55,7 @@
                                 <field name="zip" placeholder="ZIP" class="o_address_zip"/>
                                 <field name="country" placeholder="Country" class="o_address_country" options='{"no_open": True, "no_create": True}'/>
                             </div>
-                            <field name="location"  placeholder="i.e.. Rear wall next to the door"/>
+                            <field name="location" placeholder="i.e.. Rear wall next to the door"/>
                         </group>
                         <group>
                             <field name="manufacturer_id"/>
@@ -72,13 +83,14 @@
                                 <field name="jobs" readonly="1" nolabel="1" invisible="not jobs"/>
                             </group>
                         </page>
-                        <page string="Other Info">
+                        <page string="Other Info" name="other_info">
                             <group>
                                 <group>
                                     <field name="category_id" string="Category" help="Group of like equipment. If the calibration inspections module is installed, this category is where to set up the calibration points"/>
                                     <field name="product_id"/>
                                 </group>
                                 <group>
+                                    <field name="system_id" domain="[('client_id', '=', client)]"/>
                                     <field name="latitude" widget="maps"/>
                                     <field name="longitude" widget="maps"/>
                                 </group>
@@ -150,12 +162,12 @@
                 <field name="location"/>
                 <field name="product_id"/>
                 <filter name="group_by_client" context="{'group_by': 'client'}"/>
+                <filter name="group_by_system" string="System" context="{'group_by': 'system_id'}"/>
                 <filter name="group_by_manufacturer" context="{'group_by': 'manufacturer_id'}"/>
                 <filter name="group_by_product" context="{'group_by': 'product_id'}"/>
             </search>
         </field>
     </record>
-
 
     <record id="action_equipment_details" model="ir.actions.act_window">
         <field name="name">Equipment Details</field>
@@ -168,8 +180,8 @@
                 Add your Equipment!
             </p>
         </field>
-
     </record>
+
     <record id="action_equipment_category" model="ir.actions.act_window">
         <field name="name">Equipment Category</field>
         <field name="type">ir.actions.act_window</field>
@@ -177,7 +189,6 @@
         <field name="view_mode">list,form</field>
         <field name="context">{}</field>
         <field name="help" type="html">
-
             <p class="'o_view_nocontent_smiling_face">
                 Add your Category!
             </p>
@@ -191,7 +202,6 @@
         <field name="view_mode">list,form</field>
         <field name="context">{}</field>
         <field name="help" type="html">
-
             <p class="'o_view_nocontent_smiling_face">
                 Add your Manufacturer!
             </p>
@@ -218,4 +228,5 @@
             action="action_equipment_manufacturer"
             parent="menu_configuration"
             sequence="2"/>
+
 </odoo>

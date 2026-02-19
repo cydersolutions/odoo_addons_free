@@ -13,4 +13,5 @@
 from . import equipment
 from . import contacts
 from . import equipment_jobs
+from . import equipment_systems
 

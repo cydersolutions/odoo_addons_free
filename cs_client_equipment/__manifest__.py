@@ -1,18 +1,17 @@
 # -*- coding: utf-8 -*-
 
 #################################################################################
-# Author      : Cyder Solutions (<www.cyder.com.au>)
-# Copyright(c): 2021-now
-# All Rights Reserved.
-#
-# This module is copyright property of the author mentioned above.
-# You can't redistribute/reshare/recreate it for any purpose.
-#
+# Author      : Cyder Solutions (<www.cyder.com.au>)                            #
+# Copyright(c): 2018-present                                                    #
+# All Rights Reserved.                                                          #
+#                                                                               #
+# This module is copyright property of the author mentioned above.              #
+# You can't redistribute/reshare/recreate it for any purpose.                   #
 #################################################################################
 
 {
     'name': 'Client Equipment',
-    'version': '19.0.1.0.6',
+    'version': '19.0.1.0.7',
     'category': 'Productivity',
     'author': 'Cyder Solutions',
     'website': 'https://www.cyder.com.au',
@@ -25,6 +24,8 @@
         'security/ir.model.access.csv',
         'views/menu.xml',
         'views/equipment_view.xml',
+        'views/equipment_job_view.xml',
+        'views/equipment_system_views.xml',
         'views/res_partner.xml',
     ],
     'demo': [
