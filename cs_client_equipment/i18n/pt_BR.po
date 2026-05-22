@@ -1,0 +1,481 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * cs_client_equipment
+#
+# Translators:
+# Cyder Solutions <www.cyder.com.au>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-23 00:00+0000\n"
+"PO-Revision-Date: 2026-05-23 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Portuguese (Brazil)\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: cs_client_equipment
+#: code:addons/cs_client_equipment/models/equipment.py:0
+#, python-format
+msgid "%s (copy)"
+msgstr "%s (cópia)"
+
+#. module: cs_client_equipment
+#: code:addons/cs_client_equipment/models/contacts.py:0
+#: model:ir.model.fields,field_description:cs_client_equipment.field_res_partner__equipment_count
+#: model:ir.actions.act_window,name:cs_client_equipment.action_equipment_details
+#: model:ir.ui.menu,name:cs_client_equipment.menu_equipment_details
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.partner_equipment_form_inherit
+msgid "Equipment"
+msgstr "Equipamento"
+
+#. module: cs_client_equipment
+#: model:ir.model,name:cs_client_equipment.model_equipment_details
+msgid "Equipment Details"
+msgstr "Detalhes do Equipamento"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__name
+msgid "Equipment Name"
+msgstr "Nome do Equipamento"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__category_id
+#: model:ir.actions.act_window,name:cs_client_equipment.action_equipment_category
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_details_form
+msgid "Equipment Category"
+msgstr "Categoria de Equipamento"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__client
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_systems__client_id
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_systems_search
+msgid "Client"
+msgstr "Cliente"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__manufacturer_id
+#: model:ir.actions.act_window,name:cs_client_equipment.action_equipment_manufacturer
+#: model:ir.ui.menu,name:cs_client_equipment.menu_equipment_manufacturer
+msgid "Manufacturer"
+msgstr "Fabricante"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__ref
+msgid "Reference"
+msgstr "Referência"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__asset_tag
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__asset_tag
+msgid "Asset Tag"
+msgstr "Etiqueta de Ativo"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__location
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__location
+msgid "Equipment Location"
+msgstr "Localização do Equipamento"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__address
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__address
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_jobs_form
+msgid "Equipment Address"
+msgstr "Endereço do Equipamento"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__model
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__model
+msgid "Model"
+msgstr "Modelo"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__serial_no
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__serial_no
+msgid "Serial Number"
+msgstr "Número de Série"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__image
+msgid "Image"
+msgstr "Imagem"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__street
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__street
+msgid "Street"
+msgstr "Rua"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__street2
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__street2
+msgid "Street2"
+msgstr "Complemento"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__zip
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__zip
+msgid "Zip"
+msgstr "CEP"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__city
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__city
+msgid "City"
+msgstr "Cidade"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__state
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__state
+msgid "State"
+msgstr "Estado"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__country
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__country
+msgid "Country"
+msgstr "País"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__site_contact
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__site_contact
+#: model:ir.model.fields,field_description:cs_client_equipment.field_res_partner__site_contact
+msgid "Site Contact"
+msgstr "Contato no Local"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__site_phone
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__site_phone
+#: model:ir.model.fields,field_description:cs_client_equipment.field_res_partner__site_phone
+msgid "Site Phone"
+msgstr "Telefone do Local"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__note
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__note
+msgid "Note"
+msgstr "Observação"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__history
+msgid "History"
+msgstr "Histórico"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__latitude
+msgid "Latitude"
+msgstr "Latitude"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__longitude
+msgid "Longitude"
+msgstr "Longitude"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__file_ids
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_details_form
+msgid "Documents"
+msgstr "Documentos"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__jobs
+msgid "Jobs"
+msgstr "Ordens de Serviço"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__system_ids
+#: model:ir.ui.menu,name:cs_client_equipment.menu_equipment_systems
+msgid "Systems"
+msgstr "Sistemas"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__system_id
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_details_form
+msgid "System"
+msgstr "Sistema"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_details__product_id
+msgid "Product"
+msgstr "Produto"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,help:cs_client_equipment.field_equipment_details__product_id
+msgid "The product that this equipment represents"
+msgstr "O produto que este equipamento representa"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,help:cs_client_equipment.field_equipment_details__category_id
+msgid "Group of like equipment. If the calibration inspections module is installed, this category is where to set up the calibration points"
+msgstr "Grupo de equipamentos similares. Se o módulo de inspeções de calibração estiver instalado, esta categoria é onde os pontos de calibração são configurados"
+
+#. module: cs_client_equipment
+#: model:ir.model,name:cs_client_equipment.model_equipment_category
+msgid "Equipment Category"
+msgstr "Categoria de Equipamento"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_category__name
+#: model:ir.ui.menu,name:cs_client_equipment.menu_equipment_category
+msgid "Category Name"
+msgstr "Nome da Categoria"
+
+#. module: cs_client_equipment
+#: model:ir.ui.menu,name:cs_client_equipment.menu_equipment_category
+msgid "Categories"
+msgstr "Categorias"
+
+#. module: cs_client_equipment
+#: model:ir.model,name:cs_client_equipment.model_equipment_manufacturer
+msgid "Equipment Manufacturer"
+msgstr "Fabricante de Equipamento"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_manufacturer__name
+msgid "Manufacturer Name"
+msgstr "Nome do Fabricante"
+
+#. module: cs_client_equipment
+#: model:ir.ui.menu,name:cs_client_equipment.menu_equipment_manufacturer
+msgid "Manufacturers"
+msgstr "Fabricantes"
+
+#. module: cs_client_equipment
+#: model:ir.model,name:cs_client_equipment.model_equipment_systems
+msgid "Equipment Systems"
+msgstr "Sistemas de Equipamento"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_systems__name
+msgid "System Name"
+msgstr "Nome do Sistema"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_systems__equipment_ids
+msgid "Equipment"
+msgstr "Equipamento"
+
+#. module: cs_client_equipment
+#: model:ir.model,name:cs_client_equipment.model_equipment_jobs
+msgid "Equipment Job"
+msgstr "Ordem de Serviço de Equipamento"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__name
+msgid "Job Number"
+msgstr "Número da Ordem"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__assignee
+msgid "Assignee"
+msgstr "Responsável"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__equipment
+msgid "Equipment"
+msgstr "Equipamento"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__issues
+msgid "Issues"
+msgstr "Problemas"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__report
+msgid "Report"
+msgstr "Relatório"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__task_id
+msgid "Task"
+msgstr "Tarefa"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__service_date
+msgid "Service Date"
+msgstr "Data do Serviço"
+
+#. module: cs_client_equipment
+#: model:ir.model.fields,field_description:cs_client_equipment.field_equipment_jobs__owner
+msgid "Owner"
+msgstr "Proprietário"
+
+#. module: cs_client_equipment
+#: model:res.groups,name:cs_client_equipment.group_client_equipment_user
+msgid "Client Equipment User"
+msgstr "Usuário de Equipamento de Cliente"
+
+#. module: cs_client_equipment
+#: model:res.groups,comment:cs_client_equipment.group_client_equipment_user
+msgid "Access to client equipment module"
+msgstr "Acesso ao módulo de equipamento de cliente"
+
+#. module: cs_client_equipment
+#: model:res.groups,name:cs_client_equipment.group_client_equipment_administrator
+msgid "Client Equipment Administrator"
+msgstr "Administrador de Equipamento de Cliente"
+
+#. module: cs_client_equipment
+#: model:res.groups,comment:cs_client_equipment.group_client_equipment_administrator
+msgid "Full access to client equipment module"
+msgstr "Acesso completo ao módulo de equipamento de cliente"
+
+#. module: cs_client_equipment
+#: model:ir.ui.menu,name:cs_client_equipment.menu_client_equipment
+msgid "Client Equipment"
+msgstr "Equipamento de Cliente"
+
+#. module: cs_client_equipment
+#: model:ir.ui.menu,name:cs_client_equipment.menu_configuration
+msgid "Configurations"
+msgstr "Configurações"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_details_form
+msgid "Notes"
+msgstr "Observações"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_details_form
+msgid "Service History"
+msgstr "Histórico de Serviços"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_details_form
+msgid "Other Info"
+msgstr "Outras Informações"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_details_form
+msgid "Category"
+msgstr "Categoria"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_details_form
+msgid "No jobs found."
+msgstr "Nenhuma ordem de serviço encontrada."
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_details_form
+msgid "This area stores historic servicing data if the Client Equipment Field Repairs module has been installed and jobs have been created."
+msgstr "Esta área armazena dados históricos de serviço se o módulo de Reparos em Campo de Equipamento de Cliente estiver instalado e ordens de serviço tiverem sido criadas."
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_details_form
+msgid "e.g. LED Monitor"
+msgstr "ex.: Monitor LED"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_details_form
+msgid "i.e.. Rear wall next to the door"
+msgstr "ex.: Parede dos fundos ao lado da porta"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_details_form
+msgid "Enter Equipment Notes"
+msgstr "Insira observações do equipamento"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_category_form
+msgid "e.g. Monitors"
+msgstr "ex.: Monitores"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_manufacturer_form
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_systems_form
+msgid "e.g. AUS LABS"
+msgstr "ex.: AUS LABS"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_details_form
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_manufacturer_form
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_category_form
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_systems_form
+msgid "Name"
+msgstr "Nome"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_jobs_form
+msgid "Notes"
+msgstr "Observações"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_jobs_form
+msgid "Report"
+msgstr "Relatório"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_jobs_form
+msgid "Enter Equipment Notes"
+msgstr "Insira observações do equipamento"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_jobs_form
+msgid "Enter Your Equipment Issues"
+msgstr "Insira os problemas do equipamento"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_jobs_form
+msgid "Enter Report"
+msgstr "Insira o relatório"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_jobs_form
+msgid "Street..."
+msgstr "Rua..."
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_jobs_form
+msgid "Street 2..."
+msgstr "Complemento..."
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_jobs_form
+msgid "ZIP"
+msgstr "CEP"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.view_equipment_systems_form
+msgid "Equipment"
+msgstr "Equipamento"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.action_equipment_details
+msgid "Add your Equipment!"
+msgstr "Adicione seu Equipamento!"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.action_equipment_category
+msgid "Add your Category!"
+msgstr "Adicione sua Categoria!"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.action_equipment_manufacturer
+msgid "Add your Manufacturer!"
+msgstr "Adicione seu Fabricante!"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.action_equipment_systems
+msgid "Add your System!"
+msgstr "Adicione seu Sistema!"
+
+#. module: cs_client_equipment
+#: model_terms:ir.ui.view,arch_db:cs_client_equipment.action_equipment_jobs
+msgid "Create your Job !"
+msgstr "Crie sua Ordem de Serviço!"
+
+#. module: cs_client_equipment
+#: model:cs_client_equipment.equipment_details,_constraints:cs_client_equipment._unique_equipment_serial_no
+msgid "Serial number must be unique. This serial number is already assigned to another equipment record."
+msgstr "O número de série deve ser único. Este número de série já está atribuído a outro registro de equipamento."
+
+#. module: cs_client_equipment
+#: model:cs_client_equipment.equipment_details,_constraints:cs_client_equipment._unique_equipment_asset_tag
+msgid "Asset tag must be unique. This asset tag is already assigned to another equipment record."
+msgstr "A etiqueta de ativo deve ser única. Esta etiqueta de ativo já está atribuída a outro registro de equipamento."
