@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*-
 
 #################################################################################
@@ -71,11 +72,11 @@ class EquipmentDetails(models.Model):
     # without a serial number or asset tag will not conflict with each other.
     _unique_equipment_serial_no = models.Constraint(
         'UNIQUE(serial_no)',
-        _('Serial number must be unique. This serial number is already assigned to another equipment record.'),
+        'Serial number must be unique. This serial number is already assigned to another equipment record.',
     )
     _unique_equipment_asset_tag = models.Constraint(
         'UNIQUE(asset_tag)',
-        _('Asset tag must be unique. This asset tag is already assigned to another equipment record.'),
+        'Asset tag must be unique. This asset tag is already assigned to another equipment record.',
     )
 
     @api.depends('system_ids')
@@ -139,3 +140,4 @@ class EquipmentManufacturer(models.Model):
     _description = "equipment.manufacturer"
 
     name = fields.Char('Manufacturer Name', required=True, translate=True)
+
